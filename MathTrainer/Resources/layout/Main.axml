@@ -3,6 +3,72 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout1"
+        android:columnCount="6"
+        android:rowCount="1">
+        <CheckBox
+            android:text="0 "
+            android:id="@+id/checkBox_0"
+            android:checked="true" />
+        <CheckBox
+            android:text="1 "
+            android:id="@+id/checkBox_1"
+            android:checked="true" />
+        <CheckBox
+            android:text="2 "
+            android:id="@+id/checkBox_2"
+            android:checked="true" />
+        <CheckBox
+            android:text="3 "
+            android:id="@+id/checkBox_3"
+            android:checked="true" />
+        <CheckBox
+            android:text="4 "
+            android:id="@+id/checkBox_4"
+            android:checked="true" />
+        <CheckBox
+            android:text="5 "
+            android:id="@+id/checkBox_5"
+            android:checked="true" />
+        <CheckBox
+            android:text="6 "
+            android:id="@+id/checkBox_6"
+            android:checked="true" />
+        <CheckBox
+            android:text="7 "
+            android:id="@+id/checkBox_7"
+            android:checked="true" />
+        <CheckBox
+            android:text="8 "
+            android:id="@+id/checkBox_8"
+            android:checked="true" />
+        <CheckBox
+            android:text="9 "
+            android:id="@+id/checkBox_9"
+            android:checked="true" />
+        <CheckBox
+            android:text="10 "
+            android:id="@+id/checkBox_10"
+            android:checked="true" />
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout2"
+        android:columnCount="3">
+        <Button
+            android:text="Start 20"
+            android:id="@+id/button_start20" />
+        <Button
+            android:text="Start 50"
+            android:id="@+id/button_start50" />
+        <Button
+            android:text="Start 100"
+            android:id="@+id/button_start100" />
+    </GridLayout>
     <TextView
         android:text="Score"
         android:layout_width="match_parent"
@@ -10,19 +76,64 @@
         android:id="@+id/score"
         android:textColor="@android:color/holo_red_light"
         android:textIsSelectable="false"
-        android:textSize="24dp" />
+        android:textSize="16dp" />
     <TextView
         android:text="opération"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/operation"
         android:clickable="false"
-        android:textSize="64dp"
+        android:textSize="32dp"
         android:textIsSelectable="false" />
-    <NumberPicker
+    <EditText
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/answer_picker"
-        android:scaleY="4"
-        android:scaleX="4" />
+        android:id="@+id/editText_answer"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:text="0"
+        android:textAlignment="textEnd" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout3"
+        android:columnCount="3">
+        <Button
+            android:text="1"
+            android:id="@+id/button_1" />
+        <Button
+            android:text="2"
+            android:id="@+id/button_2" />
+        <Button
+            android:text="3"
+            android:id="@+id/button_3" />
+        <Button
+            android:text="4"
+            android:id="@+id/button_4" />
+        <Button
+            android:text="5"
+            android:id="@+id/button_5" />
+        <Button
+            android:text="6"
+            android:id="@+id/button_6" />
+        <Button
+            android:text="7"
+            android:id="@+id/button_7" />
+        <Button
+            android:text="8"
+            android:id="@+id/button_8" />
+        <Button
+            android:text="9"
+            android:id="@+id/button_9" />
+        <Button
+            android:text="&lt;"
+            android:id="@+id/button_BckSpc" />
+        <Button
+            android:text="0"
+            android:id="@+id/button_0" />
+        <Button
+            android:id="@+id/button_Enter"
+            android:text="Ent." />
+    </GridLayout>
 </LinearLayout>

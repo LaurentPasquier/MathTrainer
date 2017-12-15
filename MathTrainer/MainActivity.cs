@@ -17,18 +17,6 @@ namespace MathTrainer
 		Random rand = new Random();
 		int a, b;
 
-		protected void NextTest()
-		{
-			TextView operation_view = FindViewById<TextView>(Resource.Id.operation);
-			a = rand.Next(1, 10);
-			b = rand.Next(1, 10);
-			operation_view.Text = a + " x " + b;
-			++test_count;
-
-			NumberPicker answer_picker = FindViewById<NumberPicker>(Resource.Id.answer_picker);
-			answer_picker.Value = 0;
-		}
-
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
@@ -39,24 +27,63 @@ namespace MathTrainer
 			// Start first test
 			NextTest();
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			NumberPicker answer_picker = FindViewById<NumberPicker>(Resource.Id.answer_picker);
-			answer_picker.MinValue = 0;
-			answer_picker.MaxValue = 100;
+			// Get buttons from the layout resource and attach event to each of them
+			FindViewById<Button>(Resource.Id.button_0).Click += delegate { AppendDigit("0"); };
+			FindViewById<Button>(Resource.Id.button_1).Click += delegate { AppendDigit("1"); };
+			FindViewById<Button>(Resource.Id.button_2).Click += delegate { AppendDigit("2"); };
+			FindViewById<Button>(Resource.Id.button_3).Click += delegate { AppendDigit("3"); };
+			FindViewById<Button>(Resource.Id.button_4).Click += delegate { AppendDigit("4"); };
+			FindViewById<Button>(Resource.Id.button_5).Click += delegate { AppendDigit("5"); };
+			FindViewById<Button>(Resource.Id.button_6).Click += delegate { AppendDigit("6"); };
+			FindViewById<Button>(Resource.Id.button_7).Click += delegate { AppendDigit("7"); };
+			FindViewById<Button>(Resource.Id.button_8).Click += delegate { AppendDigit("8"); };
+			FindViewById<Button>(Resource.Id.button_9).Click += delegate { AppendDigit("9"); };
+			FindViewById<Button>(Resource.Id.button_BckSpc).Click += delegate { BackSpace(); };
+			FindViewById<Button>(Resource.Id.button_Enter).Click += delegate { CheckAnswer(); };
+		}
 
-			// Loop on answer
-			answer_picker.ValueChanged += delegate {
-				int answer = answer_picker.Value;
+		protected void NextTest()
+		{
+			TextView operation_view = FindViewById<TextView>(Resource.Id.operation);
+			a = rand.Next(1, 10);
+			b = rand.Next(1, 10);
+			operation_view.Text = a + " x " + b;
+			++test_count;
+
+			EditText answer_text = FindViewById<EditText>(Resource.Id.editText_answer);
+			answer_text.Text = "0";
+			answer_text.Selected = true;
+		}
+
+		protected void AppendDigit(string digit)
+		{
+			EditText answer_text = FindViewById<EditText>(Resource.Id.editText_answer);
+			if (answer_text.Text != "0")
+				answer_text.Text += digit[0];
+			else
+				answer_text.Text = digit;
+		}
+
+		protected void BackSpace()
+		{
+			EditText answer_text = FindViewById<EditText>(Resource.Id.editText_answer);
+			answer_text.Text = "0";
+		}
+
+		protected void CheckAnswer()
+		{
+			UInt32 answer = 0;
+			EditText answer_text = FindViewById<EditText>(Resource.Id.editText_answer);
+			if (UInt32.TryParse(answer_text.Text, out answer))
+			{
 				if (answer == a * b)
 					++score;
-
 				TextView score_view = FindViewById<TextView>(Resource.Id.score);
 				score_view.Text = score + " / " + test_count;
-
 				NextTest();
-			};
+			}
 		}
+
 	}
 }
 
