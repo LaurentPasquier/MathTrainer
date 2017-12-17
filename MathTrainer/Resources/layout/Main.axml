@@ -69,31 +69,28 @@
             android:text="Start 100"
             android:id="@+id/button_start100" />
     </GridLayout>
-    <TextView
-        android:text="Score"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/score"
-        android:textColor="@android:color/holo_red_light"
-        android:textIsSelectable="false"
-        android:textSize="16dp" />
-    <TextView
-        android:text="opération"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/operation"
-        android:clickable="false"
-        android:textSize="32dp"
-        android:textIsSelectable="false" />
-    <EditText
-        android:inputType="number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_answer"
-        android:textSize="32dp"
-        android:textStyle="bold"
-        android:text="0"
-        android:textAlignment="textEnd" />
+        android:id="@+id/gridLayout4"
+        android:columnCount="3">
+        <TextView
+            android:text="..."
+            android:id="@+id/operation"
+            android:clickable="false"
+            android:textSize="32dp"
+            android:textIsSelectable="false" />
+        <TextView
+            android:text="  =  "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView1"
+            android:textSize="32dp" />
+        <TextView
+            android:text="..."
+            android:id="@+id/answer"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+    </GridLayout>
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -135,5 +132,20 @@
         <Button
             android:id="@+id/button_Enter"
             android:text="Ent." />
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout5"
+        android:columnCount="2">
+        <TextView
+            android:text="Score   "
+            android:id="@+id/score"
+            android:textColor="@android:color/holo_red_light"
+            android:textIsSelectable="false"
+            android:textSize="32dp" />
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:textSize="32dp" />
     </GridLayout>
 </LinearLayout>

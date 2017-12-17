@@ -60,41 +60,44 @@ namespace MathTrainer
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f05001e
-			public const int button_0 = 2131034142;
-			
-			// aapt resource value: 0x7f050014
-			public const int button_1 = 2131034132;
-			
-			// aapt resource value: 0x7f050015
-			public const int button_2 = 2131034133;
-			
-			// aapt resource value: 0x7f050016
-			public const int button_3 = 2131034134;
-			
-			// aapt resource value: 0x7f050017
-			public const int button_4 = 2131034135;
-			
-			// aapt resource value: 0x7f050018
-			public const int button_5 = 2131034136;
-			
-			// aapt resource value: 0x7f050019
-			public const int button_6 = 2131034137;
-			
-			// aapt resource value: 0x7f05001a
-			public const int button_7 = 2131034138;
-			
-			// aapt resource value: 0x7f05001b
-			public const int button_8 = 2131034139;
-			
-			// aapt resource value: 0x7f05001c
-			public const int button_9 = 2131034140;
-			
-			// aapt resource value: 0x7f05001d
-			public const int button_BckSpc = 2131034141;
+			// aapt resource value: 0x7f050013
+			public const int answer = 2131034131;
 			
 			// aapt resource value: 0x7f05001f
-			public const int button_Enter = 2131034143;
+			public const int button_0 = 2131034143;
+			
+			// aapt resource value: 0x7f050015
+			public const int button_1 = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int button_2 = 2131034134;
+			
+			// aapt resource value: 0x7f050017
+			public const int button_3 = 2131034135;
+			
+			// aapt resource value: 0x7f050018
+			public const int button_4 = 2131034136;
+			
+			// aapt resource value: 0x7f050019
+			public const int button_5 = 2131034137;
+			
+			// aapt resource value: 0x7f05001a
+			public const int button_6 = 2131034138;
+			
+			// aapt resource value: 0x7f05001b
+			public const int button_7 = 2131034139;
+			
+			// aapt resource value: 0x7f05001c
+			public const int button_8 = 2131034140;
+			
+			// aapt resource value: 0x7f05001d
+			public const int button_9 = 2131034141;
+			
+			// aapt resource value: 0x7f05001e
+			public const int button_BckSpc = 2131034142;
+			
+			// aapt resource value: 0x7f050020
+			public const int button_Enter = 2131034144;
 			
 			// aapt resource value: 0x7f05000f
 			public const int button_start100 = 2131034127;
@@ -138,8 +141,8 @@ namespace MathTrainer
 			// aapt resource value: 0x7f05000a
 			public const int checkBox_9 = 2131034122;
 			
-			// aapt resource value: 0x7f050012
-			public const int editText_answer = 2131034130;
+			// aapt resource value: 0x7f050023
+			public const int chronometer = 2131034147;
 			
 			// aapt resource value: 0x7f050000
 			public const int gridLayout1 = 2131034112;
@@ -147,14 +150,23 @@ namespace MathTrainer
 			// aapt resource value: 0x7f05000c
 			public const int gridLayout2 = 2131034124;
 			
-			// aapt resource value: 0x7f050013
-			public const int gridLayout3 = 2131034131;
+			// aapt resource value: 0x7f050014
+			public const int gridLayout3 = 2131034132;
+			
+			// aapt resource value: 0x7f050010
+			public const int gridLayout4 = 2131034128;
+			
+			// aapt resource value: 0x7f050021
+			public const int gridLayout5 = 2131034145;
 			
 			// aapt resource value: 0x7f050011
 			public const int operation = 2131034129;
 			
-			// aapt resource value: 0x7f050010
-			public const int score = 2131034128;
+			// aapt resource value: 0x7f050022
+			public const int score = 2131034146;
+			
+			// aapt resource value: 0x7f050012
+			public const int textView1 = 2131034130;
 			
 			static Id()
 			{
